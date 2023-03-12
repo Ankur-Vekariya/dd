@@ -90,16 +90,18 @@ export default function Navbar() {
         Products
       </Typography>
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {["Products", "Create Products", "Category", "Create Category"].map(
+          (text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          )
+        )}
       </List>
       <Divider />
       <Typography
@@ -120,7 +122,7 @@ export default function Navbar() {
         Tables
       </Typography>
       <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
+        {["Floors", "Rooms", "Tables"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -136,7 +138,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: "#2C74B3" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Button
