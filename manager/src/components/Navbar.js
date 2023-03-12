@@ -21,6 +21,8 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import CrisisAlertTwoToneIcon from "@mui/icons-material/CrisisAlertTwoTone";
+import { Navigate } from "react-router-dom";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -159,7 +161,14 @@ export default function Navbar() {
             >
               {list()}
             </SwipeableDrawer>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            <CrisisAlertTwoToneIcon
+              sx={{
+                display: { xs: "none", md: "flex" },
+                mr: 1,
+                height: 40,
+                width: 40,
+              }}
+            />
             <Typography
               variant="h6"
               noWrap
@@ -170,12 +179,13 @@ export default function Navbar() {
                 display: { xs: "none", md: "flex" },
                 fontFamily: "monospace",
                 fontWeight: 700,
-                letterSpacing: ".3rem",
+                letterSpacing: "0.3rem",
                 color: "inherit",
                 textDecoration: "none",
+                fontSize: 30,
               }}
             >
-              LOGO
+              Restaurant Manager
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
